@@ -1,8 +1,5 @@
 const router = require('express').Router();
-const books = require('./books_dumb');
 const bookModel = require('../model/book_model');
-
-let booksDirectory = books;
 
 router.get('/books', async function (req, res) {
    const bookList = await bookModel.find();
